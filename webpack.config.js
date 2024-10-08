@@ -20,6 +20,7 @@ export default {
     assetModuleFilename: "assets/[hash][ext][query]",
     publicPath: "/",
   },
+  target: 'web',
   devServer: {
     static: {
       directory: path.join(__dirname, "public"), // Serve static files from 'public'
