@@ -1,0 +1,19 @@
+body {
+  /* Reset Margin and Padding */
+  margin: 0;
+  padding: 0;
+  background-color: #2c3e50;
+
+}
+
+.app {
+  /* Parent for displaying footer stick to the bottom */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  font-family: "Roboto", system-ui;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #2c3e50;
+}

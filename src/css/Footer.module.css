@@ -1,0 +1,56 @@
+/* Footer.module.css */
+.container {
+  background-color: #1abc9c;
+  width: 100%;
+  margin-top: auto;
+
+  display: grid;
+  justify-content: center; /* x-axis center */
+  align-items: center; /* y-axis center */
+
+  text-align: center;
+}
+
+.container .ul_container ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.container .ul_container li {
+  margin: 5px;
+}
+
+.container .ul_container li a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+/* Create an animated underline using a pseudo-element */
+.container .ul_container li a::after {
+  content: ""; /* Creates an empty content for the pseudo-element */
+  position: absolute; /* Position the underline relative to the anchor */
+  width: 100%; /* Full width of the link */
+  height: 1.5px; /* Thickness of the underline */
+  background-color: black; /* Color of the underline */
+  bottom: -2px; /* Position the underline slightly below the text */
+  left: 0; /* Align the underline to the left */
+
+  /* Initial state: the underline is hidden */
+  transform: scaleX(0); /* Scale the underline to 0 width */
+  transform-origin: right; /* Set the origin for scaling to the right */
+
+  /* Smooth transition effect for the transformation */
+  transition: transform 0.3s ease-out;
+}
+
+/* Expand the underline on hover */
+.container .ul_container li a:hover::after {
+  transform: scaleX(1); /* Scale the underline to full width */
+  transform-origin: left; /* Change origin to the left for expansion */
+}
+.container > p {
+  margin-top: 0;
+}
